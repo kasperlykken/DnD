@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Handouts — cosmok</title>
+  <meta name="description" content="Props, links og printbare filer til bordet. A4-venligt ved print." />
+  <meta property="og:title" content="Handouts — cosmok" />
+  <meta property="og:description" content="Kvitteringer, VIP-pass, inspektioner og ur/clock. Printvenlig side." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <!-- Print CSS kun her -->
+  <style media="print">
+    @page { size: A4; margin: 12mm; }
+    .site-header, .site-footer, .page-intro .lede { display:none !important; }
+    body { background: #fff; color: #000; }
+    .wrap { max-width: none; padding: 0; }
+    .card-grid { display:block; }
+    .card { break-inside: avoid; border-color: #000; box-shadow:none; margin-bottom: 10mm; }
+    a.button { border:1px solid #000; color:#000 !important; }
+    .print-note { display:block; color:#000; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Spring til indhold</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="brand" href="../">
+        <span class="icon" aria-hidden="true">✦</span>
+        <span class="wordmark">cosmok</span>
+      </a>
+      <nav class="site-nav" aria-label="Global navigation">
+        <ul>
+          <li><a href="../next/">Næste session</a></li>
+          <li><a href="../wiki/">Cosmipedia</a></li>
+          <li><a href="../handouts/" aria-current="page">Handouts</a></li>
+          <li><a href="../map/">Kort</a></li>
+          <li><a href="../rules/">Husregler</a></li>
+          <li><a href="../crew/">Crew</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <header class="page-intro">
+      <h1>Handouts</h1>
+      <p class="lede">Klar til bordet. Klik for at åbne eller højreklik for “Gem som…”</p>
+      <p class="print-note muted">Tip: Ved print er layoutet A4-venligt; QR-koder kan tilføjes senere.</p>
+    </header>
+
+    <section class="card-grid">
+      <article class="card">
+        <div class="card-body">
+          <h2>CosmoK-kvittering + stempelkort</h2>
+          <p>Lille kiosk-vibe til betalinger og loyalitet.</p>
+          <div class="btn-row">
+            <a class="button" href="../assets/handouts/receipt-stampcard.svg" download>Download SVG</a>
+            <a class="button outline" href="../assets/handouts/receipt-stampcard.svg" target="_blank" rel="noopener">Åbn</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="kuglen-solgt">
+        <div class="card-body">
+          <h2>“Kuglen solgt” (IX/”Stig”)</h2>
+          <p>Kort kvittering for et tvivlsomt salg.</p>
+          <div class="btn-row">
+            <a class="button" href="../assets/handouts/kuglen-solgt.svg" download>Download SVG</a>
+            <a class="button outline" href="../assets/handouts/kuglen-solgt.svg" target="_blank" rel="noopener">Åbn</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h2>Docking-inspektion (Karen)</h2>
+          <p>Tjekliste til hangarporten. Pip-pip.</p>
+          <div class="btn-row">
+            <a class="button" href="../assets/handouts/docking-inspection.svg" download>Download SVG</a>
+            <a class="button outline" href="../assets/handouts/docking-inspection.svg" target="_blank" rel="noopener">Åbn</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="vip-pass">
+        <div class="card-body">
+          <h2>VIP-pass (Más Vegas)</h2>
+          <p>Skinnende adgangskort til dårlige beslutninger.</p>
+          <div class="btn-row">
+            <a class="button" href="../assets/handouts/vip-pass-mas-vegas.svg" download>Download SVG</a>
+            <a class="button outline" href="../assets/handouts/vip-pass-mas-vegas.svg" target="_blank" rel="noopener">Åbn</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h2>Ringkiler/stjerne-clock (printvenligt)</h2>
+          <p>Modulært ur til kosmisk kaos. Klip, fold, peg.</p>
+          <div class="btn-row">
+            <a class="button" href="../assets/handouts/ringkiler-stjerneclock.svg" download>Download SVG</a>
+            <a class="button outline" href="../assets/handouts/ringkiler-stjerneclock.svg" target="_blank" rel="noopener">Åbn</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© cosmok — Spelljammerkampagne. <em>‘Ingen plasma ved pumperne.’</em></p>
+      <p><a href="mailto:dm@cosmok.space">Kontakt DM</a></p>
+    </div>
+  </footer>
+</body>
+</html>
