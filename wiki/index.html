@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cosmipedia — cosmok</title>
+  <meta name="description" content="Opslagsværk for kampagnen: steder, personer, begivenheder. Wikisider kan linke til hinanden." />
+  <meta property="og:title" content="Cosmipedia — cosmok" />
+  <meta property="og:description" content="Wiki med facts, navne og særlige begivenheder i Spelljammer-verdenen." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <style>
+    .search { display:flex; gap:.5rem; align-items:center; margin-block:1rem 1.5rem; }
+    .search input { flex:1; padding:.75rem 1rem; border-radius:999px; border:1px solid var(--surface-3); background:var(--surface-1); color:var(--text); }
+    .wiki article { padding:1rem; border:1px solid var(--surface-3); border-radius:16px; background:var(--surface-1); box-shadow: var(--shadow-1); }
+    .wiki article + article { margin-top:1rem; }
+    .wiki h2 { display:flex; align-items:baseline; gap:.5rem; }
+    .permalink { font-size:.9rem; text-decoration:none; border:1px solid var(--surface-3); padding:.1rem .5rem; border-radius:999px; }
+    .taxonomy { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem; }
+    .tag { font-size:.85rem; padding:.2rem .6rem; border-radius:999px; background:var(--surface-2); border:1px solid var(--surface-3); }
+    .muted { color: var(--text-dim); font-size:.95rem; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Spring til indhold</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="brand" href="../">
+        <span class="icon" aria-hidden="true">✦</span>
+        <span class="wordmark">cosmok</span>
+      </a>
+      <nav class="site-nav" aria-label="Global navigation">
+        <ul>
+          <li><a href="../next/">Næste session</a></li>
+          <li><a href="../wiki/" aria-current="page">Cosmipedia</a></li>
+          <li><a href="../handouts/">Handouts</a></li>
+          <li><a href="../map/">Kort</a></li>
+          <li><a href="../rules/">Husregler</a></li>
+          <li><a href="../crew/">Crew</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <header class="page-intro">
+      <h1>Cosmipedia</h1>
+      <p class="lede">Opslagsværk. Klik på sektioner eller søg. Sider kan linke til hinanden.</p>
+      <div class="search">
+        <label for="q" class="sr-only">Søg i wiki</label>
+        <input id="q" type="search" placeholder="Søg: steder, personer, begivenheder …" aria-describedby="count">
+        <span id="count" class="muted"></span>
+      </div>
+    </header>
+
+    <section class="wiki" aria-label="Wikiartikler">
+      <article id="maanebyen">
+        <h2>Månebyen <a class="permalink" href="#maanebyen" aria-label="Kopier link til Månebyen">#</a></h2>
+        <p>En frihavn udhugget i en hul måne. <em>Alt</em> kan købes — men aldrig billigt.</p>
+        <p>Se også: <a href="#store-luigi">Store Luigi</a>, <a href="#docking-inspektion">Karen</a>, <a href="#mas-vegas">Más&nbsp;Vegas</a>.</p>
+        <div class="taxonomy"><span class="tag">Sted</span><span class="tag">Handel</span></div>
+      </article>
+
+      <article id="archivarius-ix">
+        <h2>Archivarius IX <a class="permalink" href="#archivarius-ix" aria-label="Kopier link til Archivarius IX">#</a></h2>
+        <p>En høflig, men uforsonlig arkivar-automaton, samler <q>alt, der glimter af sandhed</q>.</p>
+        <p>Se også: <a href="#kosmisk-kaos">Kosmisk Kaos</a>, <a href="#kuglen-solgt">“Kuglen solgt”</a>.</p>
+        <div class="taxonomy"><span class="tag">NPC</span><span class="tag">Viden</span></div>
+      </article>
+
+      <article id="mas-vegas">
+        <h2>Más Vegas <a class="permalink" href="#mas-vegas" aria-label="Kopier link til Más Vegas">#</a></h2>
+        <p>En neon-ørkenstation hvor held er en ressource — og gæld er tyngdekraft.</p>
+        <p>Se også: <a href="#vip-pass">VIP-pass</a>, <a href="#sir-lumen">Sir Lumen</a>.</p>
+        <div class="taxonomy"><span class="tag">Sted</span><span class="tag">Chance</span></div>
+      </article>
+
+      <article id="kosmisk-kaos">
+        <h2>Kosmisk Kaos <a class="permalink" href="#kosmisk-kaos" aria-label="Kopier link til Kosmisk Kaos">#</a></h2>
+        <p>Et usynligt ur, der tikker ved hver risikabel handling. Når det ringer, vælter brættet.</p>
+        <p>Se også: <a href="#heist-rammer">Heist-rammer</a>, <a href="../rules/">Husregler</a>.</p>
+        <div class="taxonomy"><span class="tag">Mekanik</span></div>
+      </article>
+
+      <article id="sir-lumen">
+        <h2>Sir Lumen <a class="permalink" href="#sir-lumen" aria-label="Kopier link til Sir Lumen">#</a></h2>
+        <p>En paladin med lommelygte-hjerte. Lyver sjældent, men udelader gerne.</p>
+        <div class="taxonomy"><span class="tag">NPC</span></div>
+      </article>
+
+      <article id="store-luigi">
+        <h2>Store Luigi <a class="permalink" href="#store-luigi" aria-label="Kopier link til Store Luigi">#</a></h2>
+        <p>Kioskboss i Månebyen. Kendt for stive priser og blød karamel.</p>
+        <div class="taxonomy"><span class="tag">NPC</span><span class="tag">Handel</span></div>
+      </article>
+
+      <article id="docking-inspektion">
+        <h2>Karen (Docking-inspektør) <a class="permalink" href="#docking-inspektion" aria-label="Kopier link til Karen">#</a></h2>
+        <p>Har en scanner, der piber ved drama. Piber tit.</p>
+        <div class="taxonomy"><span class="tag">NPC</span><span class="tag">Station</span></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© cosmok — Spelljammerkampagne. <em>‘Ingen plasma ved pumperne.’</em></p>
+      <p><a href="mailto:dm@cosmok.space">Kontakt DM</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal, lokal søgning i wiki (ingen libs)
+    const input = document.getElementById('q');
+    const articles = Array.from(document.querySelectorAll('.wiki article'));
+    const count = document.getElementById('count');
+    function filter() {
+      const q = input.value.trim().toLowerCase();
+      let visible = 0;
+      articles.forEach(a => {
+        const hit = a.textContent.toLowerCase().includes(q);
+        a.style.display = hit ? '' : 'none';
+        if (hit) visible++;
+      });
+      count.textContent = q ? `${visible} resultat(er)` : '';
+    }
+    input.addEventListener('input', filter);
+  </script>
+</body>
+</html>
