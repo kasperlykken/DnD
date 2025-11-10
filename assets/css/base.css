@@ -14,6 +14,8 @@
   --wrap: 1100px;
 }
 
+
+
 *{ box-sizing: border-box; }
 html,body{ height:100%; }
 body{
@@ -176,3 +178,11 @@ h3{ font-size: clamp(1.1rem, 3vw, 1.25rem); margin:.2rem 0; }
 .section-title{ margin-top: .5rem; }
 
 .updated{ color: var(--text-dim); font-size:.95rem; margin-top: .75rem; }
+
+/* Fremhæv k/K i wordmark/hero */
+.wordmark .mark,
+.hero-title .mark{
+  color: var(--primary);           /* #FFD54A */
+  text-shadow: 0 0 8px rgba(255,213,74,.35);
+}
+
