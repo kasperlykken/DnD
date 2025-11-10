@@ -220,7 +220,7 @@ h3{ font-size: clamp(1.1rem, 3vw, 1.25rem); margin:.2rem 0; }
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../img/stars-hero-bg.jpg") center/cover no-repeat;
+  background: url("../img/stars-hero-bg-ratio-2-1.jpg") center/cover no-repeat;
   opacity: .7;               /* justér efter smag */
   filter: saturate(.9) brightness(.85) contrast(1.05);
   z-index: -1;
