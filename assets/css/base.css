@@ -15,6 +15,10 @@
 }
 
 
+/*Baseline / typografi
+- Sørger for forudsigelig størrelse (padding tælles med).
+- System-font stack for hurtig rendering, ingen eksterne fonts.
+- Standard linkfarve = sekundær blå.*/
 
 *{ box-sizing: border-box; }
 html,body{ height:100%; }
@@ -31,12 +35,14 @@ body{
 a{ color: var(--secondary); }
 a:hover{ text-decoration: underline; }
 
+/*Layout-utility*/
 .wrap{
   max-width: var(--wrap);
   margin-inline: auto;
   padding: 1rem;
 }
 
+/*Header & navigation*/
 .site-header{
   position: sticky; top:0; z-index: 30;
   background: linear-gradient(180deg, rgba(8,12,28,.9), rgba(8,12,28,.6) 60%, transparent);
@@ -79,6 +85,8 @@ a:hover{ text-decoration: underline; }
   text-decoration:none;
 }
 
+
+/*Hero (typografi & grund-baggrund)*/
 .hero{
   text-align:center;
   padding: 3.5rem 1rem 2rem;
@@ -88,7 +96,7 @@ a:hover{ text-decoration: underline; }
   border-radius: 24px;
 }
 .hero-title{
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(2.4rem, 6vw, 4rem);    /*clamp() gør størrelser flydende fra mobil → desktop.*/
   line-height:1.05; margin:0;
   letter-spacing:.5px;
   text-shadow: 0 2px 0 rgba(0,0,0,.25);
@@ -97,10 +105,12 @@ a:hover{ text-decoration: underline; }
 
 .page-intro .lede{ color: var(--text-dim); margin-top:.25rem; }
 
+
+/*Cards & grids*/
 .card-grid{
   margin-block: 1.5rem 2.5rem;
   display:grid; gap:1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));    /*Auto-fit gør grid’et responsivt (så mange kolonner som der er plads til).*/
 }
 .card{
   background: var(--surface-1);
@@ -113,9 +123,10 @@ a:hover{ text-decoration: underline; }
 .card-title{ margin: .25rem 0 .35rem; font-size: 1.25rem; }
 .card-text{ margin:0; color: var(--text-dim); }
 .link-card{ position:relative; display:flex; justify-content:space-between; align-items:center; gap:1rem; text-decoration:none; color:inherit; }
-.link-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-2); }
+.link-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-2); }   /*Kort får bløde hjørner, diskret kant og skygger.*/
 .link-card .card-cta{ font-weight:700; margin-right:.5rem; }
 
+/*Lister & formular-detaljer*/
 .details{
   list-style:none; padding:0; margin:0 0 1rem 0;
 }
@@ -129,6 +140,8 @@ a:hover{ text-decoration: underline; }
 .checklist input{ transform: translateY(1px); }
 
 .btn-row{ display:flex; gap:.6rem; flex-wrap:wrap; }
+
+/*Knapper*/
 .button{
   display:inline-block; border: none; text-decoration:none; cursor:pointer;
   padding:.7rem 1rem; border-radius:999px; font-weight: 700;
@@ -142,8 +155,10 @@ a:hover{ text-decoration: underline; }
   border:1px solid var(--surface-3); box-shadow:none;
 }
 
+/*Billeder*/
 img{ max-width:100%; height:auto; display:block; }
 
+/*Footer*/
 .site-footer{
   border-top: 1px solid rgba(255,255,255,.06);
   margin-top: 2rem;
@@ -153,9 +168,10 @@ img{ max-width:100%; height:auto; display:block; }
 
 .muted{ color: var(--text-dim); }
 
+/*Tilgængelighed*/
 /* Skip link for tilgængelighed */
 .skip-link{
-  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;    /* keyboard jump til main */
 }
 .skip-link:focus{
   position:fixed; left: 1rem; top: 1rem; width:auto; height:auto; padding:.6rem 1rem;
@@ -163,12 +179,13 @@ img{ max-width:100%; height:auto; display:block; }
 }
 
 /* Fokusmarkeringer */
-:focus-visible{
+:focus-visible{   /* keyboard-fokus style */
   outline: 3px solid var(--secondary);
   outline-offset: 2px;
   border-radius: 6px;
 }
 
+/*Headings*/
 /* Typografi tweaks */
 h1,h2,h3{ line-height:1.2; }
 h1{ font-size: clamp(1.6rem, 4.5vw, 2.2rem); margin: .5rem 0; }
@@ -179,7 +196,7 @@ h3{ font-size: clamp(1.1rem, 3vw, 1.25rem); margin:.2rem 0; }
 
 .updated{ color: var(--text-dim); font-size:.95rem; margin-top: .75rem; }
 
-/* Fremhæv k/K i wordmark/hero */
+/* Fremhæv gul k/K i wordmark/hero */
 .wordmark .mark,
 .hero-title .mark{
   color: var(--primary);           /* #FFD54A */
@@ -187,6 +204,10 @@ h3{ font-size: clamp(1.1rem, 3vw, 1.25rem); margin:.2rem 0; }
 }
 
 
+/*Hero-baggrund med billede (overlægges ovenpå gradienterne)
+- To hero-blokke er bevidst: den første laver glød, den anden lægger billedlag via ::before og en overlay via ::after.
+- isolation:isolate giver egen stacking-kontekst, så pseudo-elementerne kan ligge bag indholdet uden at “slå igennem”.
+- Sti-vinkel: CSS-filen ligger i assets/css/, billedet i assets/img/ → derfor ../img/....*/
 
 /* Hero cosmok: baggrundsbillede bag titel */
 .hero{
@@ -200,7 +221,7 @@ h3{ font-size: clamp(1.1rem, 3vw, 1.25rem); margin:.2rem 0; }
   position: absolute;
   inset: 0;
   background: url("../img/stars-hero-bg.png") center/cover no-repeat;
-  opacity: .35;               /* justér efter smag */
+  opacity: .5;               /* justér efter smag */
   filter: saturate(.9) brightness(.85) contrast(1.05);
   z-index: -1;
 }

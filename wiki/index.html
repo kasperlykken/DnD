@@ -176,7 +176,7 @@
     filters.appendChild(chipAll);
 
     // Bestil rækkefølge: ønskede chips først, derefter resten der findes på siden
-    const preferred = ["npc","lokation","begivenhed","kvantemekanik","mekanik","handel","station","viden","chance"];
+    const preferred = ["npc","lokation","begivenhed","mekanik","handel","viden"];
     const extras = Array.from(presentTags).filter(t => !preferred.includes(t));
     const order = [...preferred, ...extras];
 
