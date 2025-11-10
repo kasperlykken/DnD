@@ -186,3 +186,33 @@ h3{ font-size: clamp(1.1rem, 3vw, 1.25rem); margin:.2rem 0; }
   text-shadow: 0 0 8px rgba(255,213,74,.35);
 }
 
+
+
+/* Hero cosmok: baggrundsbillede bag titel */
+.hero{
+  position: relative;
+  isolation: isolate;         /* eget stacking context, så ::before kan ligge bag indholdet */
+  overflow: hidden;
+}
+
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/hero-bg.svg") center/cover no-repeat;
+  opacity: .35;               /* justér efter smag */
+  filter: saturate(.9) brightness(.85) contrast(1.05);
+  z-index: -1;
+}
+
+/* let farveglød/overlay for kontrast (kan droppes) */
+.hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(14,165,233,.20), transparent 60%),
+    radial-gradient(1000px 500px at 50% -30%, rgba(255,213,74,.18), transparent 65%),
+    linear-gradient(180deg, rgba(11,19,43,.10), rgba(11,19,43,.45) 60%, rgba(11,19,43,.65));
+  z-index: -1;
+}
