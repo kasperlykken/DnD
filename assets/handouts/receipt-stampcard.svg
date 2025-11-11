@@ -27,7 +27,7 @@
     <line x1="0" y1="150" x2="480" y2="150" stroke="#111" stroke-width="1"/>
     <text class="mono" x="0" y="176">TOTAL</text>
     <text class="mono" x="420" y="176">8 cr</text>
-    <text class="mono muted" x="0" y="206">Stjernesirup til pumperne. CosmoGum til gummerne.”</text>
+    <text class="mono muted" x="0" y="206">“Stjernesirup til pumperne. CosmoGum til gummerne.”</text>
     <rect x="510" y="0" width="284" height="220" rx="12" fill="#f7f7f7" stroke="#111"/>
     <text class="title" x="522" y="26">Stempel</text>
     <text class="mono muted" x="522" y="48">10 = gratis tyggegummi</text>
