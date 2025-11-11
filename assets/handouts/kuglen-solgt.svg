@@ -10,13 +10,13 @@
   <rect class="bg" width="595" height="842" rx="8"/>
   <g transform="translate(40,40)" class="ink">
     <text class="title" x="0" y="0" dy="1em">SALGSKVITTERING — “Kuglen solgt”</text>
-    <text class="mono" x="0" y="56">Køber: “Stig” • Mellemmand: Archivarius IX</text>
+    <text class="mono" x="0" y="56">Køber: Archivarius IX </text>
     <text class="mono" x="0" y="86">Objekt: Ukendt kugle (ref. #IX-Φ-22)</text>
-    <text class="mono" x="0" y="116">Pris: 1 favør + 13 kreditter</text>
+    <text class="mono" x="0" y="116">Pris: 110 gp</text>
     <text class="mono" x="0" y="146">Betingelser: “Ingen spørgsmål under transport.”</text>
     <rect x="0" y="200" width="515" height="200" class="stamp" rx="10"/>
     <text class="mono" x="16" y="228">✦ STEMPEL: BETALT</text>
-    <text class="mono" x="0" y="446">Underskrift (køber): __________________________</text>
-    <text class="mono" x="0" y="486">Underskrift (mellemmand): _____________________</text>
+    <text class="mono" x="0" y="446">Underskrift (køber): __𝓐𝓻𝓬𝓱𝓲𝓿𝓪𝓻𝓲𝓾𝓼 𝓘𝓧__</text>
+    <text class="mono" x="0" y="486">Underskrift (sælger): _____________________</text>
   </g>
 </svg>
