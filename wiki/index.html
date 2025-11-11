@@ -69,27 +69,52 @@
 
     <section class="wiki" aria-label="Wikiartikler">
 
-      <!-- Wiki artikel skebelon:
-      <article id="id_navn_på_artiklen">
-        <h2>Artikel_overskrift <a class="permalink" href="#sti_ved_tryk_på_#_linkknap" aria-label="Kopier link til Navn_på_artiklen">#</a></h2>
-        <p>Brødtekst_beskrivelse_<q>blabla</q>="blabla"sådan_sætter_man_i_siturationstegn.</p>
-        <p>Se også: <a href="#Navn_på_en_anden_artikel">Navn_på_en_anden_artikel</a>, <a href="#Navn_på_en_tredje_artikel">“Navn_på_en_tredje_artikel”</a>.</p>
-        <div class="taxonomy"><span class="tag">Små_tags_nederst_på_artikeln</span><span class="tag">Små_tags_nederst_på_artikeln</span></div>
+<!-- Wiki artikel skebelon:
+
+      <article id="ID_NAVN">
+        <h2>ARTIKELNAVN 
+          <a class="permalink" href="#ID_NAVN" aria-label="Kopier link til ARRTIKELNAVN">#</a></h2>
+        <p>
+          BRØDTEKST<em>ITALIC</em><q>QUOTATION</q>
+        </p>
+        <p>Se også: <a href="#REFERENCE_ID_NAVN_1">REFERENCE_NAVN_1</a>, 
+                    <a href="#REFERENCE_ID_NAVN_2">REFERENCE_ID_NAVN_2</a>
+        .</p>
+        <div class="taxonomy">
+          <span class="tag">TAG_1</span>
+          <span class="tag">TAG_2</span>
+        </div>
       </article>
 -->
       <!-- Artikler nedefor -->
-      <article id="maanebyen">
-        <h2>Månebyen <a class="permalink" href="#maanebyen" aria-label="Kopier link til Månebyen">#</a></h2>
-        <p>Byen der . <em>Alt</em> kan købes — men aldrig billigt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sit commodi deserunt, ex soluta dolorem impedit voluptatem ipsa necessitatibus vitae, corporis magnam tempora quas, tenetur nobis deleniti eius! Facilis, debitis.</p>
-        <p>Se også: <a href="#store-luigi">Store Luigi</a>, <a href="#docking-inspektion">Karen</a>, <a href="#mas-vegas">Más&nbsp;Vegas</a>.</p>
-        <div class="taxonomy"><span class="tag">Sted</span><span class="tag">Handel</span></div>
+      <article id="matematiki-maaneby">
+        <h2>Matematiki Måneby 
+          <a class="permalink" href="#matematiki maaneby" aria-label="Kopier link til Matematiki Måneby">#</a></h2>
+        <p>
+          En halvmåneformet by, hvor gaderne slynger mellem huse og butiksfacader. 
+          Lanterner svæver i lav tyngde over kanalerne, og tagene er belagt med sortsten, der glitrer som natten. 
+          Byen er kendt som vært for Solarium Tritonus og sine håndvævede solsejl.
+        </p>
+        <p>Se også: <a href="#solarium-tritonus">Solarium Tritonus</a>.</p>
+        <div class="taxonomy">
+          <span class="tag">Lokation</span>
+        </div>
       </article>
       
-      <article id="mas-vegas">
-        <h2>Más Vegas <a class="permalink" href="#mas-vegas" aria-label="Kopier link til Más Vegas">#</a></h2>
-        <p>En neon-ørkenstation hvor held er en ressource — og gæld er tyngdekraft.</p>
-        <p>Se også: <a href="#vip-pass">VIP-pass</a>, <a href="#sir-lumen">Sir Lumen</a>.</p>
-        <div class="taxonomy"><span class="tag">Sted</span><span class="tag">Chance</span></div>
+
+      <article id="solarium-tritonus">
+        <h2>Solarium Tritonus 
+          <a class="permalink" href="#solarium-tritonus" aria-label="Kopier link til Solarium Tritonus">#</a></h2>
+        <p>
+          En ni-dages byfest med tre særlige nætter, hvor himlen synger af lys. 
+          Markeder, optog og musik fylder gaderne. 
+          Tradition: man tænder tre lanterner for Fortid, Retning og Hjem, og slukker dem i omvendt orden ved afgang.
+        </p>
+        <p>Se også: <a href="#matematiki-maaneby">Matematiki Måneby</a>
+        .</p>
+        <div class="taxonomy">
+          <span class="tag">begivenhed</span>
+        </div>
       </article>
 
       
@@ -132,12 +157,10 @@
     // Synonymer/kanoniske chips (du kan udvide listen)
     const ALIASES = {
       "npc": ["npc"],
-      "lokation": ["sted", "lokation", "location"],
+      "lokation": ["lokation"],
       "begivenhed": ["begivenhed", "event", "hændelse"],
-      //"kvantemekanik": ["kvantemekanik", "mekanik"],
       "mekanik": ["mekanik"],
       "handel": ["handel"],
-      //"station": ["station"],
       "viden": ["viden"],
     };
 
