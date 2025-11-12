@@ -260,6 +260,28 @@
       </article>
 
 
+      <article id="pistol">
+        <h2>Pistol
+          <a class="permalink" href="#pistol" aria-label="Kopier link til Pistol">#</a></h2>
+        <p>
+          <b>Type:</b> Martial Ranged Weapon
+          <b>Værdi:</b> 250 GP
+          <b>Damage:</b> 1d10 Piercing
+          <b>Range:</b> 30/90<br>
+          <br>
+          <b>Mastery Property</b><br>
+          <i>Vex:</i>Hvis du rammer et creature med dette våben og giver den skade, har du Advantage på dit næste attack mod den skabning inden slutningen af din næste tur.
+        </p>
+        <p>Se også: <a href="#...">...</a>.
+        </p>
+        <div class="taxonomy">
+          <span class="tag">Skydevåben</span>
+          <span class="tag">Våben</span>
+          <span class="tag">Combat</span>
+        </div>
+      </article>
+
+
 
     </section>
   </main>
@@ -289,6 +311,7 @@
     "mekanik": ["mekanik","system"],
     "handel": ["handel","butik","kiosk"],
     "viden": ["viden","lore","info"]
+    "combat": ["combat","damage","weapon"]
   };
 
   // --- Opsamling af artikler og tags ---
@@ -328,7 +351,7 @@
   filters.appendChild(chipAll);
 
   // Rækkefølge for chips
-  const preferred = ["npc","creature","lokation","begivenhed","mekanik","handel","viden"];
+  const preferred = ["npc","creature","lokation","begivenhed","mekanik","handel","viden","combat"];
   const extras = Array.from(presentTags).filter(t => !preferred.includes(t));
   const order = [...preferred, ...extras];
   order.forEach(key => filters.appendChild(makeChip(key,false)));
